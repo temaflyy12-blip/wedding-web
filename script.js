@@ -35,17 +35,12 @@ function closeForm() {
   document.getElementById('formModal').style.display = 'none';
 }
 
-document.getElementById('rsvpForm').addEventListener('submit', function (e) {
-  e.preventDefault();
-  alert("Terima kasih atas konfirmasi Anda! 🙏");
-  closeForm();
-});
-
-// Tombol "Petunjuk Ke Lokasi"
-document.querySelector('.location-btn').addEventListener('click', function () {
-  const location = 'Gedung Sasana Krida.1, RT.1/RW.5, Jatinegara Kaum, Kec. Pulo Gadung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13250';
+// Fungsi Tombol "Petunjuk Ke Lokasi" (Sudah Benar)
+function openMap() {
+  const location = 'Gedung Sasana Krida.1, RT.1/RW.5, Jatinegara Kaum, Kec. Pulo Gadung, Kota Jakarta Timur';
+  const encodedLocation = encodeURIComponent(location);
   window.open(`https://www.google.com/maps/search/?api=1&query=${encodedLocation}`, '_blank');
-});
+}
 
 // Musik Latar Otomatis Saat Halaman Dibuka
 window.addEventListener('load', function () {
@@ -96,11 +91,7 @@ AOS.init({
   once: true,
 });
 
-function openMap() {
-  const location = 'Gedung Sasana Krida.1, RT.1/RW.5, Jatinegara Kaum, Kec. Pulo Gadung, Kota Jakarta Timur';
-  const encodedLocation = encodeURIComponent(location);
-  window.open(`https://www.google.com/maps/search/?api=1&query=${encodedLocation}`, '_blank');
-}
+// Fungsi Navigasi Scroll
 function scrollToSection(id) {
   document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
 }

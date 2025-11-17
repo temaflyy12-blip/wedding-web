@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Undangan Pernikahan Rafly & Indri </title>
+  <title>Undangan Pernikahan Rafly & Indri</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
@@ -46,40 +46,13 @@
       <p>24 - January - 2026</p>
       <p>Kepada Yth<br>Bapak/Ibu/Saudara/i</p>
       <div class="group-name">
-  <p>Nama Undangan </p>
-  <button class="open-invite" onclick="openForm()">Open Invitation</button>
-</div>
-
-<!-- Modal Formulir -->
- <div id="formModal" class="modal">
-    <div class="modal-content">
-      <h3>Terima Kasih atas Undangan Anda!</h3>
-      <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLScAH5GzLhD-pm0r3onubce_A5Fwq6zBIgI3PMRDdprc7crWqw/viewform?embedded=true"
-        width="100%"
-        height="500"
-        frameborder="0"
-        marginheight="0"
-        marginwidth="0"
-      >
-        Memuat formulir...
-      </iframe>
-      <button class="close-btn" onclick="closeForm()">×</button>
-    </div>
-    </div>
-
-      <label>Pesan (Opsional):</label>
-      <textarea name="entry.11223344" placeholder="Tulis doa atau pesan"></textarea>
-
-      <button type="submit">Kirim RSVP</button>
-    </form>
-    <button class="close-btn" onclick="closeForm()">×</button>
-  </div>
-</div>
-</section>
+        <p>Nama Undangan</p>
+        <button class="open-invite" onclick="openForm()">Open Invitation</button>
+      </div>
+    </section>
 
     <!-- Panel 3: Lokasi -->
-     <section class="card lokasi" id="lokasi" data-aos="fade-left">
+    <section class="card right" id="lokasi" data-aos="fade-left">
       <div class="map-container">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.476756347563!2d114.3449825151087!3d-3.1935498999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de420e7c889528d%3A0x7239e78b23137252!2sGedung%20Graha%20Purnama!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
@@ -96,45 +69,51 @@
 
   </div>
 
+  <!-- Galeri Foto 2 Kolom -->
+  <section class="photo-grid-section" id="gallery" data-aos="fade-up">
+    <h2>Galeri Foto</h2>
+    <div class="photo-grid-container">
+      <img src="images/1.jpg" alt="Moment 1" class="grid-photo">
+      <img src="images/2.jpg" alt="Moment 2" class="grid-photo">
+      <img src="images/3.jpg" alt="Moment 3" class="grid-photo">
+      <img src="images/couple.jpg" alt="Moment 4" class="grid-photo">
+    </div>
+  </section>
+
+  <!-- QR Code -->
+  <section class="qrcode-section" data-aos="fade-up">
+    <h2>Transfer Hadiah</h2>
+    <p>Scan QR Code di bawah untuk memberikan hadiah:</p>
+    <img src="images/qrcode-transfer.png" alt="QR Code Transfer" class="qrcode">
+  </section>
+
+  <!-- Modal Formulir -->
+  <div id="formModal" class="modal">
+    <div class="modal-content">
+      <h3>Terima Kasih atas Undangan Anda!</h3>
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLScAH5GzLhD-pm0r3onubce_A5Fwq6zBIgI3PMRDdprc7crWqw/viewform?embedded=true"
+        width="100%"
+        height="500"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+      >
+        Memuat formulir...
+      </iframe>
+      <button class="close-btn" onclick="closeForm()">×</button>
+    </div>
+  </div>
+
+  <!-- Footer Navigasi -->
   <footer class="nav-footer">
-  <div class="nav-item" onclick="scrollToSection('undangan')">Mempelai</div>
-  <div class="nav-item" onclick="scrollToSection('acara')">Acara</div>
-  <div class="nav-item" onclick="scrollToSection('lokasi')">Maps</div>
-  <div class="nav-item" onclick="scrollToSection('gallery')">Gallery</div>
-</footer>
+    <div class="nav-item" onclick="scrollToSection('undangan')">Mempelai</div>
+    <div class="nav-item" onclick="scrollToSection('acara')">Acara</div>
+    <div class="nav-item" onclick="scrollToSection('lokasi')">Maps</div>
+    <div class="nav-item" onclick="scrollToSection('gallery')">Gallery</div>
+  </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1000,
-    once: true,
-  });
-</script>
+  <script src="script.js"></script>
 </body>
-<!-- Galeri Foto 2 Kolom -->
-<section class="photo-grid-section" id="gallery">
-  <h2>Galeri Foto</h2>
-  <div class="photo-grid-container">
-    <img src="images/1.jpg" alt="Moment 1" class="grid-photo">
-    <img src="images/2.jpg" alt="Moment 2" class="grid-photo">
-    <img src="images/3.jpg" alt="Moment 3" class="grid-photo">
-    <img src="images/couple.jpg" alt="Moment 4" class="grid-photo">
-  </div>
-</section>
-<section class="qrcode-section">
-  <h2>Transfer Hadiah</h2>
-  <p>Scan QR Code di bawah untuk memberikan hadiah:</p>
-  <img src="images/qrcode-transfer.png" alt="QR Code Transfer" class="qrcode">
-</section>
-<section class="card left" data-aos="fade-right">
-  ...
-</section>
-
-<section class="card center" data-aos="fade-up">
-  ...
-</section>
-
-<section class="card right" data-aos="fade-left">
-  ...
-</section>
 </html>
